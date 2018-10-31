@@ -8,7 +8,7 @@ import org.ethereum.crypto.ECKey;
 
 import com.github.smartheye.cryptography.util.HexUtil;
 
-public class EthereumTransactionSignatureMaker {
+public class EthereumJTransactionSignatureMaker {
     private static final BigInteger DEFAULT_GAS_PRICE = new BigInteger("10000000000000");
     private static final BigInteger DEFAULT_BALANCE_GAS = new BigInteger("21000");
 	public static void main(String[] args) {

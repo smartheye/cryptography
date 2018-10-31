@@ -1,0 +1,25 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "PqxcaSgD8dv4Hca656tec7xGmEI=",
+			"path": "github.com/btcsuite/btcd/btcec",
+			"revision": "67e573d211ace594f1366b4ce9d39726c4b19bd0",
+			"revisionTime": "2018-10-13T00:44:28Z"
+		},
+		{
+			"checksumSHA1": "PfaeLCEGCjXUcJJg9KZksahUfW4=",
+			"path": "github.com/issue9/assert",
+			"revision": "713f4d66f5530055971c506ba8991ae1fe81bc4a",
+			"revisionTime": "2018-09-04T12:53:32Z"
+		},
+		{
+			"checksumSHA1": "LN1V2pZQwKnoDwcsgXpzG4+Vges=",
+			"path": "golang.org/x/crypto/sha3",
+			"revision": "e84da0312774c21d64ee2317962ef669b27ffb41",
+			"revisionTime": "2018-10-24T13:26:30Z"
+		}
+	],
+	"rootPath": "github.com/smartheye/cryptography/go-secp256k1"
+}

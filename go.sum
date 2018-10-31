@@ -1,0 +1,13 @@
+github.com/Bowery/prompt v0.0.0-20180817134258-8a1d5376df1c h1:fAMg70P5ydy1uiIj6CdA69h6nmQKbv18VlVOXhKNrcM=
+github.com/Bowery/prompt v0.0.0-20180817134258-8a1d5376df1c/go.mod h1:4/6eNcqZ09BZ9wLK3tZOjBA1nDj+B0728nlX5YRlSmQ=
+github.com/dchest/safefile v0.0.0-20151022103144-855e8d98f185 h1:3T8ZyTDp5QxTx3NU48JVb2u+75xc040fofcBaN+6jPA=
+github.com/dchest/safefile v0.0.0-20151022103144-855e8d98f185/go.mod h1:cFRxtTwTOJkz2x3rQUNCYKWC93yP1VKjR8NUhqFxZNU=
+github.com/google/shlex v0.0.0-20150127133951-6f45313302b9 h1:JM174NTeGNJ2m/oLH3UOWOvWQQKd+BoL3hcSCUWFLt0=
+github.com/google/shlex v0.0.0-20150127133951-6f45313302b9/go.mod h1:RpwtwJQFrIEPstU94h88MWPXP2ektJZ8cZ0YntAmXiE=
+github.com/kardianos/govendor v1.0.9 h1:WOH3FcVI9eOgnIZYg96iwUwrL4eOVx+aQ66oyX2R8Yc=
+github.com/kardianos/govendor v1.0.9/go.mod h1:yvmR6q9ZZ7nSF5Wvh40v0wfP+3TwwL8zYQp+itoZSVM=
+github.com/pkg/errors v0.8.0 h1:WdK/asTD0HN+q6hsWO3/vpuAkAr+tw6aNJNDFFf0+qw=
+github.com/pkg/errors v0.8.0/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
+gopkg.in/yaml.v2 v2.2.1 h1:mUhvW9EsL+naU5Q3cakzfE91YhliOondGd6ZrsDBHQE=
+gopkg.in/yaml.v2 v2.2.1/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=

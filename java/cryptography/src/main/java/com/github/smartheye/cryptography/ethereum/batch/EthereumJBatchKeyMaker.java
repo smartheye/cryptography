@@ -6,7 +6,7 @@ import org.ethereum.crypto.ECKey;
 
 import com.github.smartheye.cryptography.util.HexUtil;
 
-public class EthereumBatchKeyMaker {
+public class EthereumJBatchKeyMaker {
 
 	public static void main(String[] args) {
 		ECKey eckey = new ECKey();

@@ -6,6 +6,8 @@ import java.math.BigInteger;
 
 import org.junit.jupiter.api.Test;
 
+import com.github.smartheye.cryptography.ethereum.data.Transaction;
+
 public class TestTransaction{
 
 	/**

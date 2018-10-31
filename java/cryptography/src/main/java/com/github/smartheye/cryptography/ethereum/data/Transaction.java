@@ -1,4 +1,4 @@
-package com.github.smartheye.cryptography.etherum.data;
+package com.github.smartheye.cryptography.ethereum.data;
 
 import java.io.Serializable;
 import java.math.BigInteger;
@@ -27,7 +27,7 @@ public class Transaction implements Serializable {
 	 * 计数器，从1开始严格递增
 	 */
 	@JSONField(ordinal = 0)
-	private BigInteger accountNonce;
+	private String accountNonce;
 
 	/**
 	 * 收款人地址
@@ -39,7 +39,7 @@ public class Transaction implements Serializable {
 	 * 金额 金额是10^18=1个金额单位，最小金额单位为微 注意没有小数
 	 */
 	@JSONField(ordinal = 2)
-	private BigInteger amount;
+	private String amount;
 
 	/**
 	 * Base58编码的附加参数
@@ -53,26 +53,30 @@ public class Transaction implements Serializable {
 	
 	public Transaction(BigInteger accountNonce, String receipt, BigInteger amount) {
 		super();
-		this.accountNonce = accountNonce;
+		this.accountNonce = accountNonce.toString();
 		this.receipt = receipt;
-		this.amount = amount;
+		this.amount = amount.toString();
 		this.payload = null;
 	}
 
 	public Transaction(BigInteger accountNonce, String receipt, BigInteger amount, String payload) {
 		super();
-		this.accountNonce = accountNonce;
+		this.accountNonce = accountNonce.toString();
 		this.receipt = receipt;
-		this.amount = amount;
+		this.amount = amount.toString();
 		this.payload = payload;
 	}
 
-	public BigInteger getAccountNonce() {
+	public String getAccountNonce() {
 		return accountNonce;
 	}
 
-	public void setAccountNonce(BigInteger accountNonce) {
+	public void setAccountNonce(String accountNonce) {
 		this.accountNonce = accountNonce;
+	}
+	
+	public void setAccountNonce(BigInteger accountNonce) {
+		this.accountNonce = accountNonce.toString();
 	}
 
 	public String getReceipt() {
@@ -83,13 +87,19 @@ public class Transaction implements Serializable {
 		this.receipt = receipt;
 	}
 
-	public BigInteger getAmount() {
+	public String getAmount() {
 		return amount;
 	}
 
-	public void setAmount(BigInteger amount) {
+	public void setAmount(String amount) {
 		this.amount = amount;
 	}
+	
+
+	public void setAmount(BigInteger amount) {
+		this.amount = amount.toString();
+	}
+
 
 	public String getPayload() {
 		return payload;
@@ -153,17 +163,19 @@ public class Transaction implements Serializable {
 	 * @return JSON格式
 	 */
 	public String toJSON() {
-		if (this.accountNonce.signum() <= 0) {
+		BigInteger bAccountNonce = new BigInteger(this.accountNonce);
+		if (bAccountNonce.signum() <= 0) {
 			throw new IllegalStateException("AccountNonce必须大于0");
 		}
-		if (this.amount.signum() <= 0) {
+		BigInteger bAmount = new BigInteger(this.amount);
+		if (bAmount.signum() <= 0) {
 			throw new IllegalStateException("Amount必须大于0");
 		}
 		String payloadCopy = null;
 		if (payload != null && payload.length() > 0) {
 			payloadCopy = payload;
 		}
-		Transaction copy = new Transaction(this.accountNonce, this.receipt, this.amount, payloadCopy);
+		Transaction copy = new Transaction(bAccountNonce, this.receipt, bAmount, payloadCopy);
 		// payload为null或者空文字的时候不输出
 		return JSON.toJSONString(copy);
 	}
